@@ -1,0 +1,103 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.project-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#root {
+	width: 550px;
+	height: 495px;
+	background-color: #d1d1d1;
+}
+
+.header-container {
+	width: 550px;
+	height: 65px;
+	display: flex;
+	background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+	align-items: center;
+	padding: 0 20px 0 20px;
+}
+
+.troll-image {
+	width: 31.31px;
+	height: 26.22px;
+}
+
+.header-sub-1-container {
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+}
+
+.header-sub-1-container > h1 {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20.7482px;
+	line-height: 24px;
+	letter-spacing: -0.1em;
+	color: white;
+	margin-left: 10px;
+	letter-spacing: 1px;
+}
+
+.header-container > h2 {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: right;
+	color: #FFFFFF;
+}
+
+
+.meme-section-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 430px;
+}
+
+.top-text-input {
+	padding: 10px;
+	border: 1px solid #D5D4D8;
+	border-radius: 5px;
+	width: 230px;
+	font-family: Inter;
+}
+
+.bottom-text-input {
+	padding: 10px;
+	border: 1px solid #D5D4D8;
+	border-radius: 5px;
+	width: 230px;
+	margin-left: 17px;
+	font-family: Inter;
+}
+
+.new-meme-btn {
+	width: 480px;
+	height: 40px;
+	background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+	border-radius: 5px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.meme-img {
+	width: 477px;
+	height: 268px;
+	margin-top: 36px;
+}
