@@ -1,7 +1,5 @@
 import React from "react";
 
-import memesData from "../memesData.js";
-
 export default function Meme() {
 	
 	const [meme, setMeme] = React.useState({
@@ -10,7 +8,13 @@ export default function Meme() {
 		randomImg: "https://i.imgflip.com/1g8my4.jpg"
 	})
 	
-	const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+	const [allMemes, setAllMemes] = React.useState([])
+	
+	React.useEffect(() => {
+		fetch("https://api.imgflip.com/get_memes")
+		.then(res => res.json())
+		.then(data => setAllMemes(data.data.memes))
+	}, [])
 	
 	function handleChange(event) {
 		const {value, name} = event.target
@@ -24,9 +28,8 @@ export default function Meme() {
 	
 	
 	function getMemeImage() {
-		const memesArray = allMemeImages.data.memes
-		const randomNumber = Math.floor(Math.random() * memesArray.length)
-		const url = memesArray[randomNumber].url
+		const randomNumber = Math.floor(Math.random() * allMemes.length)
+		const url = allMemes[randomNumber].url
 		setMeme(prevMeme => ({
 			...prevMeme,
 			randomImg: url
@@ -67,6 +70,6 @@ export default function Meme() {
 	)
 }
 
-// https://youtu.be/bMknfKXIFA8?t=31865 까지 시청
+// https://youtu.be/bMknfKXIFA8?t=35503 까지 시청
 
 // https://scrimba.com/learn/learnreact/boxes-challenge-part-5-cobdb4d3e907fa304af4b9958
